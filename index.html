@@ -398,6 +398,9 @@
   const envelopeScreen = document.getElementById('envelope-screen');
   const envelopeContainer = document.getElementById('envelope-container');
   envelopeContainer.addEventListener('click', () => {
+    if (!musicPlaying) {
+      toggleMusic();
+    }
     envelopeContainer.classList.add('opened');
     createConfetti();
     setTimeout(() => { 
@@ -438,6 +441,7 @@
 
   // Music - Web Audio API Background Music
   let audioCtx, musicPlaying = false, gainNode, osc, env, oscTypes = ['sine', 'triangle', 'sawtooth'];
+  const musicBtn = document.getElementById('music-btn');
   function initAudio() {
     if (audioCtx) return;
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -478,9 +482,16 @@
       t += note.dur;
     });
   }
+  function updateMusicButton() {
+    musicBtn.innerHTML = musicPlaying
+      ? '<i data-lucide="volume-x" style="width:20px;height:20px;"></i>'
+      : '<i data-lucide="volume-2" style="width:20px;height:20px;"></i>';
+    lucide.createIcons();
+  }
   function toggleMusic() {
     if (!audioCtx) initAudio();
     if (!musicPlaying) {
+      audioCtx.resume();
       gainNode.gain.setTargetAtTime(0.1, audioCtx.currentTime, 0.1);
       musicPlaying = true;
       playMelody();
@@ -490,9 +501,11 @@
       musicPlaying = false;
       clearInterval(window.musicInterval);
     }
+    updateMusicButton();
   }
 
   lucide.createIcons();
+  updateMusicButton();
 </script>
   </section>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0eb356d37de802b',t:'MTc4MTk2MzA3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
