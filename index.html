@@ -77,6 +77,12 @@
     .gallery-item-animate { animation: fadeScale 0.6s cubic-bezier(0.4,0,0.2,1) forwards; opacity: 0; }
     .gallery-item-animate.active { animation-play-state: running; }
 
+    .button-animate { animation: bounceInUp 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) forwards; opacity: 0; }
+    .button-animate.active { animation-play-state: running; }
+
+    .divider-animate { animation: slideInLeft 0.8s cubic-bezier(0.4,0,0.2,1) forwards; opacity: 0; }
+    .divider-animate.active { animation-play-state: running; }
+
     /* Enhanced Text Animations with Multiple Styles */
     .text-animate { animation: slideInUp 0.7s cubic-bezier(0.4,0,0.2,1) forwards; opacity: 0; }
     .text-animate.active { animation-play-state: running; }
@@ -216,6 +222,9 @@
     .section-bg-1 { background: linear-gradient(180deg, #fff8f2, #fff0e8); }
     .section-bg-2 { background: linear-gradient(135deg, #fff5f0, #ffecd2, #fff8f2); }
     .section-bg-3 { background: linear-gradient(180deg, #fff0e8, #fff8f2); }
+
+    .section-compact-bottom { padding-bottom: 2.5rem; }
+    .section-expanded-bottom { padding-bottom: 7rem; }
   </style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
@@ -266,7 +275,7 @@
      <p data-template-id="hero-and" class="canva-text text-3xl my-4 fade-in fade-in-delay-3 text-animate text-animate-delay-3" style="animation: 2s ease-in-out 0.4s infinite normal none running pulse; color: rgb(212, 160, 90); font-weight: 400; font-style: normal; font-size: 16px;">&amp;</p>
      <h1 data-template-id="hero-bride" class="canva-text heading text-4xl md:text-6xl fade-in fade-in-delay-4 text-animate text-animate-delay-4" style="animation: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s 1 normal both running bounceInDown; color: rgb(26, 26, 26); font-weight: 400; font-style: normal; font-size: 32px;">Athira S.S.</h1>
     </div>
-    <div class="divider-line fade-in fade-in-delay-4" style="animation: slideInLeft 0.8s cubic-bezier(0.4,0,0.2,1) 0.6s both;"></div>
+    <div class="divider-line fade-in fade-in-delay-4 divider-animate" style="animation: slideInLeft 0.8s cubic-bezier(0.4,0,0.2,1) 0.6s both;"></div>
     <p data-template-id="hero-date" class="canva-text text-lg md:text-xl tracking-[3px] uppercase fade-in fade-in-delay-5 text-animate text-animate-delay-5" style="animation: 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s 1 normal both running slideInUp; color: rgb(212, 160, 90); font-weight: 400; font-style: normal; font-size: 18px;">22nd August 2026</p>
    </div style = "margin-bottom: 30px"><img data-template-id="hero-couple-image" class="canva-image w-full max-w-md h-auto rounded-2xl shadow-2xl mx-auto mt-8 md:mt-12 fade-in fade-in-delay-5 img-animate" style="animation: zoomIn 0.8s cubic-bezier(0.4,0,0.2,1) 0.9s both;" loading="lazy" src="image.png" alt="Akhil and Athira in traditional Indian wedding attire with floral garlands">
    <svg class="absolute bottom-0 left-0 w-32 opacity-10" viewBox="0 0 100 100" fill="none">
@@ -331,7 +340,7 @@
     </div>
    </div>
   </section><!-- Ceremony -->
-  <section class="py-20 px-6 section-bg-3 section-animate" style="animation-delay: 1.8s;">
+  <section class="py-20 px-6 section-bg-3 section-animate section-compact-bottom" style="animation-delay: 1.8s;">
    <div class="max-w-4xl mx-auto">
     <h2 data-template-id="ceremony-heading" class="canva-text heading text-3xl text-center mb-8 fade-in text-animate text-animate-delay-1 heading-bounce" style="animation: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2s 1 normal both running bounceInDown; color: rgb(26, 26, 26); font-weight: 700; font-style: normal; font-size: 24px;">Wedding Ceremony</h2>
     <div class="grid md:grid-cols-2 gap-8 items-center"><img data-template-id="ceremony-image" class="canva-image w-full h-72 object-cover rounded-2xl shadow-xl fade-in fade-in-delay-1 img-animate" style="animation: zoomIn 0.8s cubic-bezier(0.4,0,0.2,1) 2.1s both;" loading="lazy" src="https://images.pexels.com/photos/34079355/pexels-photo-34079355.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Luxurious floral wedding mandap decorated with chandeliers">
@@ -340,34 +349,35 @@
       <p data-template-id="ceremony-address" class="canva-text text-animate text-animate-delay-2" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.3s 1 normal both running slideInUp; color: rgb(61, 61, 61); font-weight: 400; font-style: normal; font-size: 16px;">Padinjaree Kotta, Tvm – 695006</p>
       <p data-template-id="ceremony-date" class="canva-text text-lg mt-4 text-animate text-animate-delay-3" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.4s 1 normal both running slideInUp; color: rgb(26, 26, 26); font-weight: 400; font-style: normal; font-size: 18px;">Saturday, 22nd August 2026 (1202 Chingam 06)</p>
       <p data-template-id="ceremony-muhurtham" class="canva-text text-lg font-semibold text-animate text-animate-delay-4" style="animation: 1.2s ease-in-out 2.5s infinite normal none running heartBeat; color: rgb(194, 85, 119); font-weight: 600; font-style: normal; font-size: 20px;">Muhurtham: Between 10.45 am &amp; 11.20 am</p>
-      <p data-template-id="ceremony-reception-time" class="canva-text text-animate text-animate-delay-5" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.6s 1 normal both running slideInUp; color: rgb(26, 26, 26); font-weight: 400; font-style: normal; font-size: 16px;">Reception: 10.35 am</p><a href="https://www.google.com/maps/search/Sreepadmam+Auditorium+Padinjaree+Kotta+Trivandrum+695006" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full text-white text-sm" style="background: linear-gradient(135deg, #c25577, #a8365a); animation: bounceInUp 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) 2.7s both;"><i data-lucide="map-pin" style="width:16px;height:16px;"></i> View on Map</a>
+      <p data-template-id="ceremony-reception-time" class="canva-text text-animate text-animate-delay-5" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.6s 1 normal both running slideInUp; color: rgb(26, 26, 26); font-weight: 400; font-style: normal; font-size: 16px;">Reception: 10.35 am</p><a href="https://www.google.com/maps/search/Sreepadmam+Auditorium+Padinjaree+Kotta+Trivandrum+695006" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full text-white text-sm button-animate" style="background: linear-gradient(135deg, #c25577, #a8365a); animation: bounceInUp 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) 2.7s both;"><i data-lucide="map-pin" style="width:16px;height:16px;"></i> View on Map</a>
      </div>
     </div>
    </div>
   </section><!-- Reception -->
-  <section class="py-20 px-6 section-bg-1 section-animate" style="animation-delay: 2.4s;">
+  <section class="pt-8 pb-28 px-6 section-bg-1 section-animate section-expanded-bottom" style="animation-delay: 2.4s;">
    <div class="max-w-4xl mx-auto">
     <h2 data-template-id="reception-heading" class="canva-text heading text-3xl text-center mb-8 fade-in text-animate text-animate-delay-1 heading-bounce" style="animation: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2.6s 1 normal both running bounceInDown; color: rgb(26, 26, 26); font-weight: 700; font-style: normal; font-size: 24px;">Evening Reception</h2>
     <div class="grid md:grid-cols-2 gap-8 items-center">
      <div class="text-center md:text-right space-y-3 order-2 md:order-1 fade-in fade-in-delay-1 card-animate" style="animation: slideInLeft 0.8s cubic-bezier(0.4,0,0.2,1) 2.7s both;">
       <p data-template-id="reception-venue" class="canva-text text-2xl font-semibold text-animate text-animate-delay-1" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.7s 1 normal both running slideInUp; color: rgb(26, 26, 26); font-weight: 600; font-style: normal; font-size: 22px;">Alsaj Convention Center</p>
       <p data-template-id="reception-address" class="canva-text text-animate text-animate-delay-2" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.8s 1 normal both running slideInUp; color: rgb(61, 61, 61); font-weight: 400; font-style: normal; font-size: 16px;">Azhikod – 695564</p>
-      <p data-template-id="reception-time" class="canva-text text-lg mt-4 text-animate text-animate-delay-3" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.9s 1 normal both running slideInUp; color: rgb(26, 26, 26); font-weight: 400; font-style: normal; font-size: 18px;">Same day, 22nd August 2026 | 4.00 pm to 8.00 pm</p><a href="https://www.google.com/maps/search/Alsaj+Convention+Center+Azhikod+695564" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full text-white text-sm" style="background: linear-gradient(135deg, #c25577, #a8365a); animation: bounceInUp 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) 3s both;"><i data-lucide="map-pin" style="width:16px;height:16px;"></i> View on Map</a>
+      <p data-template-id="reception-time" class="canva-text text-lg mt-4 text-animate text-animate-delay-3" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.9s 1 normal both running slideInUp; color: rgb(26, 26, 26); font-weight: 400; font-style: normal; font-size: 18px;">Same day, 22nd August 2026 | 4.00 pm to 8.00 pm</p><a href="https://www.google.com/maps/search/Alsaj+Convention+Center+Azhikod+695564" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full text-white text-sm button-animate" style="background: linear-gradient(135deg, #c25577, #a8365a); animation: bounceInUp 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) 3s both;"><i data-lucide="map-pin" style="width:16px;height:16px;"></i> View on Map</a>
      </div><img data-template-id="reception-image" class="canva-image w-full h-72 object-cover rounded-2xl shadow-xl order-1 md:order-2 fade-in fade-in-delay-2 img-animate" style="animation-delay: 2.7s;" loading="lazy" src="https://images.pexels.com/photos/12688995/pexels-photo-12688995.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Luxurious banquet hall with elegant chandeliers and floral decorations">
     </div>
-   </div><!-- Footer -->
-   <footer class="py-12 px-6 text-center section-animate" style="background: #1a1a1a; color: #ffffff; animation-delay: 2.4s;">
-    <div class="max-w-3xl mx-auto space-y-4">
+   </div>
+  </section><!-- Footer -->
+  <footer class="w-full text-center section-animate" style="background: #1a1a1a; color: #ffffff; animation-delay: 2.4s;">
+    <div class="max-w-3xl mx-auto space-y-4 px-6 py-12">
      <p data-template-id="footer-compliments" class="canva-text text-sm fade-in text-animate text-animate-delay-1" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.6s 1 normal both running slideInUp; color: rgb(212, 160, 90); font-weight: 400; font-style: normal; font-size: 13px;">With best compliments from</p>
      <p data-template-id="footer-names" class="canva-text text-base fade-in fade-in-delay-1 text-animate text-animate-delay-2" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.7s 1 normal both running slideInUp; color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Nikhil Das, Aswathy, Nivaan</p>
-     <div style="width: 80px; height: 1px; background: #d4a05a; margin: 1.5rem auto; animation: slideInLeft 0.6s cubic-bezier(0.4,0,0.2,1) 2.8s both;"></div>
+     <div class="divider-animate" style="width: 80px; height: 1px; background: #d4a05a; margin: 1.5rem auto; animation: slideInLeft 0.6s cubic-bezier(0.4,0,0.2,1) 2.8s both;"></div>
      <p data-template-id="footer-phone" class="canva-text text-xs fade-in fade-in-delay-2 text-animate text-animate-delay-3" style="animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) 2.9s 1 normal both running slideInUp; color: rgb(212, 160, 90); font-weight: 400; font-style: normal; font-size: 12px;">Phone: 8281210141, 8547020650</p>
     </div>
-   </footer><!-- Lightbox -->
-   <div class="lightbox" id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="">
-   </div><!-- Music --> <button class="music-btn" id="music-btn" onclick="toggleMusic()" aria-label="Toggle music"><i data-lucide="volume-2" style="width:20px;height:20px;"></i></button>
-   <script src="/_sdk/editing_sdk.js"></script>
-   <script>
+  </footer><!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="">
+  </div><!-- Music --> <button class="music-btn" id="music-btn" onclick="toggleMusic()" aria-label="Toggle music"><i data-lucide="volume-2" style="width:20px;height:20px;"></i></button>
+  <script src="/_sdk/editing_sdk.js"></script>
+  <script>
   // Celebration explosion function
   function createConfetti() {
     const confettiEmojis = ['🎉', '✨', '🎊', '💫', '⭐', '🌟', '💝', '💕', '🌹', '🎈'];
@@ -397,6 +407,37 @@
   // Envelope
   const envelopeScreen = document.getElementById('envelope-screen');
   const envelopeContainer = document.getElementById('envelope-container');
+  function applyGlobalAnimations() {
+    document.querySelectorAll('section h1, section h2, section h3, footer h1, footer h2, footer h3').forEach(el => {
+      el.classList.add('fade-in', 'text-animate');
+    });
+    document.querySelectorAll('section p, section span, section a, footer p, footer span, footer a').forEach(el => {
+      el.classList.add('fade-in', 'text-animate');
+    });
+    document.querySelectorAll('section img, header img, footer img').forEach(el => {
+      el.classList.add('fade-in', 'img-animate');
+    });
+    document.querySelectorAll('section .family-card, section .countdown-box, footer .max-w-3xl').forEach(el => {
+      el.classList.add('fade-in', 'card-animate');
+    });
+    document.querySelectorAll('section a.inline-flex, footer a.inline-flex').forEach(el => {
+      el.classList.add('button-animate');
+    });
+    document.querySelectorAll('.divider-line, footer .divider-animate').forEach(el => {
+      el.classList.add('divider-animate');
+    });
+  }
+  function activateEntranceAnimations() {
+    document.querySelectorAll('.section-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.card-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.img-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.countdown-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.gallery-item-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.text-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.button-animate').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.divider-animate').forEach(el => el.classList.add('active'));
+  }
+  applyGlobalAnimations();
   envelopeContainer.addEventListener('click', () => {
     if (!musicPlaying) {
       toggleMusic();
@@ -405,14 +446,7 @@
     createConfetti();
     setTimeout(() => { 
       envelopeScreen.classList.add('hidden');
-      // Activate all section animations after envelope closes
-      document.querySelectorAll('.section-animate').forEach(el => el.classList.add('active'));
-      document.querySelectorAll('.card-animate').forEach(el => el.classList.add('active'));
-      document.querySelectorAll('.img-animate').forEach(el => el.classList.add('active'));
-      document.querySelectorAll('.countdown-animate').forEach(el => el.classList.add('active'));
-      document.querySelectorAll('.gallery-item-animate').forEach(el => el.classList.add('active'));
-      // Activate text animations
-      document.querySelectorAll('.text-animate').forEach(el => el.classList.add('active'));
+      activateEntranceAnimations();
     }, 1000);
   });
 
@@ -507,6 +541,5 @@
   lucide.createIcons();
   updateMusicButton();
 </script>
-  </section>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0eb356d37de802b',t:'MTc4MTk2MzA3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body></html>
